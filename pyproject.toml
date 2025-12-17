@@ -15,6 +15,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
+setuptools = "^80.9.0"
 python = "^3.7"
 importlib-metadata = { version = ">=1,<6", python = "<3.8" }
 requests = "2.28.1"
