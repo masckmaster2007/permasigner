@@ -88,11 +88,11 @@ class DPKGBuilder(object):
 
     @property
     def data_archive_path(self):
-        return self.working_dir / 'data.tar.xz'
+        return self.working_dir / 'data.tar.gz'
 
     @staticmethod
     def open_tar_file(path):
-        tf = tarfile.open(path, 'w:xz')
+        tf = tarfile.open(path, 'w:gz')
         tf.format = tarfile.GNU_FORMAT
         return tf
 
@@ -132,7 +132,7 @@ class DPKGBuilder(object):
 
     @property
     def control_archive_path(self):
-        return self.working_dir / 'control.tar.xz'
+        return self.working_dir / 'control.tar.gz'
 
     def build_control_archive(self, maintainer_scripts):
         control_tar = self.open_tar_file(self.control_archive_path)

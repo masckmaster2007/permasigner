@@ -48,7 +48,7 @@ class Dpkg:
     def package_with_dpkg(self) -> None:
         """ Package application with dpkg-deb"""
 
-        dpkg_cmd = f"dpkg-deb -Zxz --root-owner-group -b {self.tmpfolder}/deb {self.absolute_output_path}"
+        dpkg_cmd = f"dpkg-deb -Zgzip -z9 --root-owner-group -b {self.tmpfolder}/deb {self.absolute_output_path}"
         logger.debug(f"Running command: {dpkg_cmd}", self.debug)
         subprocess.run(dpkg_cmd.split(), stdout=subprocess.DEVNULL)
 
