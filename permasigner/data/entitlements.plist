@@ -8,6 +8,8 @@
     </array>
     <key>platform-application</key>
     <true/>
+    <key>com.apple.private.security.storage.AppDataContainers</key>
+    <true/>
     <key>keychain-access-groups</key>
     <array>
       <string>{APP_KEYCHAIN_GROUPS}</string>
